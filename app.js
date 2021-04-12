@@ -23,4 +23,10 @@ app.use((req, res, next) => {
   next();
 });
 
+// Routers
+const catRoutes = require('./api/routes/cats');
+
+// Routes
+app.use('/cats', catRoutes)
+
 module.exports = app;
